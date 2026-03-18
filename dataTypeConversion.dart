@@ -6,10 +6,10 @@ void main (){
   String strValueAgain = intValue.toString(); //here i converted my int back to string
 
   //printing the values and datatype to check the conversions
-  print("The value at the begining is $strValue, and its datatype is $strValue.runtimeType");
-  print("The value then became $intValue, and its datatype is $intValue.runtimeType");
-  print("The value afterwards is $douValue, and its datatype is $douValue.runtimeType");
-  print("Again the value here is $intValueAgain, and its datatype is $intValueAgain.runtimeType");
-  print("FInally the value ended up as $strValueAgain and the data type is now $strValueAgain.runtimeType");
-  
+  print("The value at the begining is $strValue, and its datatype is ${strValue.runtimeType}");
+  print("The value then became $intValue, and its datatype became ${intValue.runtimeType}");
+  print("The value afterwards is $douValue, and its datatype is now ${douValue.runtimeType}");
+  print("Again the value here is $intValueAgain, and its datatype again is ${intValueAgain.runtimeType}");
+  print("Finally the value ended up as $strValueAgain and the data type finally is now ${strValueAgain.runtimeType}");
+
 }
