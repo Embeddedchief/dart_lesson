@@ -1,19 +1,19 @@
 class Laptop {
   Laptop(String name, String color) {
-    print("Laptop constructor");
-    print("Name is ${name}");
-    print("Color is ${color}");
+    print("This is a laptop");
+    print("Laptop name is ${name}");
+    print("Laptop color is ${color}");
   }
 }
 
 class Macbook extends Laptop {
   Macbook(String name, String color) : super(name, color) {
-    print("Name of the laptop is ${name}");
-    print("Color of this laptop is ${color}");
-    print("Macbook Constructor");
+    print("This is Macbook type of laptop");
+    print("Laptop name is ${name}");
+    print("Laptop color is ${color}");
   }
 }
 
 void main() {
-  var macbook = Macbook("Macbook Pro", "Silver");
+  Macbook macbook = Macbook("Macbook Air", "Silver");
 }
