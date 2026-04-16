@@ -6,7 +6,7 @@ class CurrencyConverter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(0, 0, 0, 0),
+      backgroundColor: Color.fromRGBO(10, 10, 10, 1),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -48,7 +48,12 @@ class CurrencyConverter extends StatelessWidget {
               onPressed: () {
                 debugPrint("You have clicked the button");
               },
-              child: Text("Convert"),
+              style: TextButton.styleFrom(
+                backgroundColor: const Color.fromARGB(255, 186, 255, 113),
+                foregroundColor: Colors.black,
+                fixedSize: Size(350, 50),
+              ),
+              child: const Text("Convert"),
             ),
           ],
         ),
