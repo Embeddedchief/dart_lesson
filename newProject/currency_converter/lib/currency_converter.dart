@@ -5,7 +5,7 @@ class CurrencyConverter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: Color.fromRGBO(0, 0, 0, 0),
       body: Center(
         child: Column(
@@ -20,24 +20,35 @@ class CurrencyConverter extends StatelessWidget {
                 color: Color.fromARGB(255, 255, 255, 255),
               ),
             ),
-            TextField(
-              style: TextStyle(color: Colors.black),
-              decoration: InputDecoration(
-                hintText: "Please enter the ammount in USD",
-                hintStyle: TextStyle(color: Colors.black),
-                suffixIcon: Icon(Icons.monetization_on_outlined),
-                suffixIconColor: Colors.black,
-                filled: true,
-                fillColor: Color.fromARGB(255, 255, 255, 255),
-                focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(
-                    color: Colors.tealAccent,
-                    width: 2.0,
-                    style: BorderStyle.solid,
-                    strokeAlign: BorderSide.strokeAlignCenter,
+            Padding(
+              padding: EdgeInsets.all(30.0),
+              child: TextField(
+                style: TextStyle(color: Colors.black),
+                decoration: InputDecoration(
+                  hintText: "Please enter the ammount in USD",
+                  hintStyle: TextStyle(color: Colors.black),
+                  suffixIcon: Icon(Icons.monetization_on_outlined),
+                  suffixIconColor: Colors.black,
+                  filled: true,
+                  fillColor: Color.fromARGB(255, 255, 255, 255),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Color.fromARGB(255, 138, 158, 161),
+                      width: 2.0,
+                      style: BorderStyle.solid,
+                      strokeAlign: BorderSide.strokeAlignOutside,
+                    ),
+                    borderRadius: BorderRadius.all(Radius.circular(20)),
                   ),
                 ),
+                keyboardType: TextInputType.number,
               ),
+            ),
+            TextButton(
+              onPressed: () {
+                debugPrint("You have clicked the button");
+              },
+              child: Text("Convert"),
             ),
           ],
         ),
