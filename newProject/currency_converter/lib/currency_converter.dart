@@ -3,10 +3,24 @@ import 'package:flutter/material.dart';
 class CurrencyConverter extends StatelessWidget {
   const CurrencyConverter({super.key});
 
+  // Create a variable to hold converted currencies
+  // Create a function that multiplies the value given by the textfield
+  // Store the value and
+  // Dislay the value
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(10, 10, 10, 1),
+      backgroundColor: Color.fromRGBO(222, 223, 216, 1),
+      appBar: AppBar(
+        title: Text(
+          "Currency Converter",
+          style: TextStyle(color: Colors.white),
+        ),
+        centerTitle: true,
+
+        backgroundColor: Color.fromARGB(255, 41, 78, 1),
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -17,7 +31,7 @@ class CurrencyConverter extends StatelessWidget {
               style: TextStyle(
                 fontSize: 35,
                 fontWeight: FontWeight.bold,
-                color: Color.fromARGB(255, 255, 255, 255),
+                color: Color.fromARGB(255, 163, 177, 170),
               ),
             ),
             Padding(
@@ -49,11 +63,11 @@ class CurrencyConverter extends StatelessWidget {
                 debugPrint("You have clicked the button");
               },
               style: TextButton.styleFrom(
-                backgroundColor: const Color.fromARGB(255, 186, 255, 113),
-                foregroundColor: Colors.black,
+                backgroundColor: const Color.fromARGB(255, 41, 78, 1),
+                foregroundColor: const Color.fromARGB(255, 255, 255, 255),
                 fixedSize: Size(350, 50),
               ),
-              child: const Text("Convert"),
+              child: const Text("Convert", style: TextStyle(fontSize: 20)),
             ),
           ],
         ),
