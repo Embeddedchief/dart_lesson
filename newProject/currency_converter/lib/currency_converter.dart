@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
 
-// Create a variable to hold converted currencies
-// Create a function that multiplies the value given by the textfield
-// Store the value and
-// Dislay the value
-
 class CurrencyConverter extends StatefulWidget {
   const CurrencyConverter({super.key});
 
@@ -30,7 +25,7 @@ class _CurrencyConverterState extends State<CurrencyConverter> {
   void _calculateConversion() {
     setState(() {
       if (textEditingController.text.isNotEmpty) {
-        result = double.parse(textEditingController.text) * 1032;
+        result = double.parse(textEditingController.text) * 1033;
       } else {
         result = 0;
       }
@@ -89,6 +84,8 @@ class _CurrencyConverterState extends State<CurrencyConverter> {
                 keyboardType: TextInputType.number,
               ),
             ),
+
+            //button
             TextButton(
               onPressed: _calculateConversion,
               style: TextButton.styleFrom(
@@ -101,7 +98,7 @@ class _CurrencyConverterState extends State<CurrencyConverter> {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Text(
-                "Note: We use the rate of N1032 per Canadian Dollar",
+                "Note: Rate is at N1033 per Canadian Dollar",
                 style: TextStyle(color: Colors.black, fontSize: 10),
               ),
             ),
